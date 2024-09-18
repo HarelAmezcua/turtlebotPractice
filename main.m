@@ -5,6 +5,7 @@ clc;
 addpath('functions\');
 
 % Initialize ROS and set up publishers and subscribers
+%Hola Mundo
 [velPub, velMsg, odomSub, resetPub, resetMsg] = initialize_ros();
 
 % Flush odometry messages to ensure up-to-date readings
