@@ -2,7 +2,6 @@ function track_trajectory(velPub, velMsg, odomSub, total_duration)
     addpath("splineAndTrajectory\");
     addpath("others\");
 
-
     % Initialize simulation parameters
     [dt, k, D] = init_simulation_parameters();
     
@@ -60,16 +59,16 @@ function track_trajectory(velPub, velMsg, odomSub, total_duration)
         
         % Record data
         time_log = [time_log; t];
-        x_log = [x_log; x];
-        y_log = [y_log; y];
+        x_log = [x_log; pos(1)];
+        y_log = [y_log; pos(2)];
         theta_log = [theta_log; theta];
         v_log = [v_log; v];
         w_log = [w_log; w];
         x_des_log = [x_des_log; desired_x(idx)];
         y_des_log = [y_des_log; desired_y(idx)];
         
-        % Display current pose (optional)
-        fprintf('Time: %.2f s, Pose: (%.2f, %.2f, %.2f)\n', t, x, y, theta);
+        % Display current pose
+        % fprintf('Time: %.2f s, Pose: (%.2f, %.2f, %.2f)\n', t, x, y, theta);
         
         % Increment index
         idx = idx + 1;
