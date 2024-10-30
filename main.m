@@ -16,10 +16,9 @@ end
 % Get and display the initial pose of the robot
 [x, y, theta] = get_pose(odomSub);
 disp(['Initial Pose: (' num2str(x) ', ' num2str(y) ', ' num2str(theta) ')']);
-return;
 
 % Move the robot forward for 5 seconds
-track_trajectory(velPub, velMsg, odomSub, 100);
+track_trajectory(velPub, velMsg, odomSub, 45);
 
 % Stop and reset the robot
 stop_robot(velPub, velMsg, resetPub, resetMsg);

@@ -1,6 +1,6 @@
 function track_trajectory(velPub, velMsg, odomSub, total_duration)
-    addpath("splineAndTrajectory\");
-    addpath("others\");
+    addpath("C:\Users\arath\OneDrive\Documents\GitHub\turtlebotPractice\functions\splineAndTrajectory");
+    addpath("C:\Users\arath\OneDrive\Documents\GitHub\turtlebotPractice\functions\others");
 
     % Initialize simulation parameters
     [dt, k, D] = init_simulation_parameters();
@@ -15,6 +15,8 @@ function track_trajectory(velPub, velMsg, odomSub, total_duration)
     time_steps = 0:dt:total_duration;
     [desired_x, desired_y, desired_vel_x, desired_vel_y] = precompute_trajectory(...
         time_steps, t_points, Spx, Spy);
+
+    plot(desired_x,desired_y,"r--","LineWidth",2);
     
     % Initialize logs for data recording
     time_log = [];
@@ -75,6 +77,7 @@ function track_trajectory(velPub, velMsg, odomSub, total_duration)
         
         % Wait for next time step
         pause(dt);
+        disp(toc);
     end
     
     % Stop the robot

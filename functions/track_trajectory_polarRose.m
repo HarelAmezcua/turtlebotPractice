@@ -51,8 +51,7 @@ function track_trajectory(velPub, velMsg, odomSub, total_duration)
     w_log = [];
     x_des_log = [];
     y_des_log = [];
-    
-    return;
+        
     
     % Start the control loop
     tic;
