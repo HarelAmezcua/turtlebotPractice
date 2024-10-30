@@ -6,7 +6,6 @@ This repository contains code for trajectory planning, controller design, and in
 
 - [Features](#features)
 - [Requirements](#requirements)
-- [Installation](#installation)
 - [Usage](#usage)
 - [Repository Structure](#repository-structure)
 - [Troubleshooting](#troubleshooting)
