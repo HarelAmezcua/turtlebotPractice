@@ -6,7 +6,6 @@ This repository contains code for trajectory planning, controller design, and in
 
 - [Features](#features)
 - [Requirements](#requirements)
-- [Installation](#installation)
 - [Usage](#usage)
 - [Repository Structure](#repository-structure)
 - [Troubleshooting](#troubleshooting)
@@ -33,31 +32,6 @@ This repository contains code for trajectory planning, controller design, and in
 - ROS (Noetic preferred)
 - A working ROS installation on TurtleBot or a simulation environment
 
-## Installation
-
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/username/turtlebot-trajectory-controller-ros.git
-    ```
-2. Open MATLAB and navigate to the cloned repository folder:
-    ```matlab
-    cd /path/to/turtlebot-trajectory-controller-ros
-    ```
-3. Ensure that the necessary toolboxes (ROS Toolbox, Robotics System Toolbox) are installed:
-    ```matlab
-    matlab.addons.installToolbox('Robotics System Toolbox');
-    matlab.addons.installToolbox('ROS Toolbox');
-    ```
-
-4. Connect to the TurtleBot via ROS:
-    ```matlab
-    rosinit('http://192.168.50.112:11311'); % Replace with your TurtleBot's IP
-    ```
-
-5. Run the initialization script:
-    ```matlab
-    init_turtlebot_ros();
-    ```
 
 ## Usage
 
